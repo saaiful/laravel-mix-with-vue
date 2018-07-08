@@ -4,7 +4,6 @@ mix.options({
     cleanCss: {level: {1: {specialComments: 'none'}}},
     postCss: [require('postcss-discard-comments')({ removeAll: true })],
     purifyCss: false,
-    uglify: {sourceMap: true,compress: {warnings: false,drop_console: true},output: {comments: false}},
 });
 
 mix.sass('src/sass/app.scss', 'dist/css')
