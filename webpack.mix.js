@@ -7,7 +7,7 @@ mix.options({
 });
 
 mix.sass('src/sass/app.scss', 'css')
- .js('src/js/app.js', 'js')
+ .js('src/js/app.js', 'js').vue()
  .sourceMaps();
 
 mix.copy('src/index.html', 'dist/index.html');
