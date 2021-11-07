@@ -1,5 +1,6 @@
 require('./bootstrap');
-window.Vue = require('vue');
+import Vue from 'vue/dist/vue';
+window.Vue = Vue;
 
 import VueRouter from 'vue-router';
 Vue.use(VueRouter);
@@ -23,8 +24,8 @@ axios.interceptors.response.use(function (response) {
 
 const router = new VueRouter({
 	routes: [
-		{ path: '/',component: require('./components/Home.vue') },
-		{ path: '*',component: require('./components/404.vue') },
+		{ path: '/',component: require('./components/Home.vue').default },
+		{ path: '*',component: require('./components/404.vue').default },
 	]
 });
 
